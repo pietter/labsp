@@ -26,6 +26,11 @@ chmod g=r program.c
 
 ## Laboratorium 3
 
+Zadanie 7:
+
+```sh
+cat plik.txt | tr " \t" "\n"
+```
 
 Zadanie 9:
 
