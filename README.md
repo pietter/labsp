@@ -22,6 +22,19 @@ chmod u=rw program.c
 chmod g=r program.c
 ```
 
+
+## Laboratorium 3
+
+Zadanie 1:
+
+```sh
+
+Zadanie 9:
+
+```sh
+cat /etc/password | head -n 3 | wc -m
+```
+
 ## Labolatorium 5
 
 Zadanie 1:
@@ -51,11 +64,24 @@ find /etc\(-type d -and ! empty\) -or \(-type f -and -name a*\) 2> /dev/null
 
 ## Laboratorium 6
 
+Zadanie 1:
+
+```sh
+grep . {1,} plik.txt
+```
+
 Zadanie 2:
 
 ```ssh
 grep ^[0-9] pl*
 ```
+
+Zadanie 3:
+
+```sh
+ls -1 | grep -E '.{8}r.'
+```
+
 Zadanie 4:
 
 ```ssh
