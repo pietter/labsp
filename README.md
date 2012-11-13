@@ -22,6 +22,27 @@ chmod u=rw program.c
 chmod g=r program.c
 ```
 
+Zadanie 5:
+```sh
+mv dom/wazne-sprawy/ praca/
+```
+
+Zadanie 6:
+```sh
+zip -r temp.zip temp
+tar -cf temp.tar temp
+```
+
+Zadanie 7:
+```sh
+rm -R temp
+```
+
+Zadanie 8:
+```sh
+tar xf temp.tar
+unzip temp.zip
+```
 
 ## Laboratorium 3
 
