@@ -35,6 +35,41 @@ Zadanie 9:
 cat /etc/password | head -n 3 | wc -m
 ```
 
+## Laboratorium 4
+
+Zadanie 1:
+
+```sh
+ls | tr a-z A-Z
+```
+
+Zadanie 2:
+
+```sh
+ls -l | cut -b 1-10,30-34,47-
+```
+
+Zadanie 3:
+
+```sh
+ls --sort=size -l
+```
+
+Zadanie 4:
+
+```sh
+cat /etc/passwd/ | sort --reverse --general-numeric-sort
+```
+
+Zadanie 5:
+```sh
+cat /etc/passwd | sort -r --field-separator=":" -g -k 4,3
+```
+
+Zadanie 6:
+```sh
+find / -printf "%u\n" 2> /dev/null | sort | uniq -c
+```
 ## Labolatorium 5
 
 Zadanie 1:
