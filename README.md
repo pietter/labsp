@@ -25,9 +25,6 @@ chmod g=r program.c
 
 ## Laboratorium 3
 
-Zadanie 1:
-
-```sh
 
 Zadanie 9:
 
