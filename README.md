@@ -2,7 +2,6 @@
 ## Laboratorium 2
 
 Zadanie 1:
-
 ```sh
 head -n 2 programc.c
 ```
@@ -26,14 +25,18 @@ chmod g=r program.c
 
 ## Laboratorium 3
 
-Zadanie 7:
+Zadanie 1:
+```sh
 
+```
+
+
+Zadanie 7:
 ```sh
 cat plik.txt | tr " \t" "\n"
 ```
 
 Zadanie 9:
-
 ```sh
 cat /etc/password | head -n 3 | wc -m
 ```
@@ -41,25 +44,21 @@ cat /etc/password | head -n 3 | wc -m
 ## Laboratorium 4
 
 Zadanie 1:
-
 ```sh
 ls | tr a-z A-Z
 ```
 
 Zadanie 2:
-
 ```sh
 ls -l | cut -b 1-10,30-34,47-
 ```
 
 Zadanie 3:
-
 ```sh
 ls --sort=size -l
 ```
 
 Zadanie 4:
-
 ```sh
 cat /etc/passwd/ | sort --reverse --general-numeric-sort
 ```
@@ -76,58 +75,48 @@ find / -printf "%u\n" 2> /dev/null | sort | uniq -c
 ## Labolatorium 5
 
 Zadanie 1:
-
 ```sh
 find ~/ -maxdepth 1 -mtime -10
 ```
 
 Zadanie 2:
-
 ```sh
 find / -name \*config\* -type f 2> /dev/null
 ```
 
 Zadanie 3:
-
 ```sh
 find ~/ -atime 20
 ```
 
 Zadanie 4:
-
 ```sh
 find /etc\(-type d -and ! empty\) -or \(-type f -and -name a*\) 2> /dev/null
 ```
 
-
 ## Laboratorium 6
 
 Zadanie 1:
-
 ```sh
 grep . {1,} plik.txt
 ```
 
 Zadanie 2:
-
 ```ssh
 grep ^[0-9] pl*
 ```
 
 Zadanie 3:
-
 ```sh
 ls -1 | grep -E '.{8}r.'
 ```
 
 Zadanie 4:
-
 ```ssh
 grep -c bash /etc/passwd
 ```
 
 Zadanie 5:
-
 ```ssh
 grep [IVXLCDM] plik.txt
 ```
