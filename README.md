@@ -125,7 +125,7 @@ Zadanie 7:
 ```sh
 find -printf "%m\n" | sort | uniq -c
 ```
-## Labolatorium 5
+## Laboratorium 5
 
 Zadanie 1:
 ```sh
