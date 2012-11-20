@@ -134,7 +134,7 @@ find ~/ -maxdepth 1 -mtime -10
 
 Zadanie 2:
 ```sh
-find / -name \*config\* -type f 2> /dev/null
+find /etc -name \*config\* -type f 2> /dev/null
 ```
 
 Zadanie 3:
