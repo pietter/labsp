@@ -120,6 +120,11 @@ Zadanie 6:
 ```sh
 find / -printf "%u\n" 2> /dev/null | sort | uniq -c
 ```
+
+Zadanie 7:
+```sh
+find -printf "%m\n" | sort | uniq -c
+```
 ## Labolatorium 5
 
 Zadanie 1:
