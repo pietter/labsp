@@ -147,6 +147,16 @@ Zadanie 4:
 find /etc\(-type d -and ! empty\) -or \(-type f -and -name a*\) 2> /dev/null
 ```
 
+Zadanie 5:
+```sh
+rm x??
+```
+
+Zadanie 6:
+```sh
+mkdir `date +%Y-%m-%d`
+```
+
 ## Laboratorium 6
 
 Zadanie 1:
