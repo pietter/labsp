@@ -43,8 +43,8 @@ echo;
 echo "s - wyświetl ścieżkę w której znajduje się skrypt."; 
 echo "p - wyświetl listę procesów użytkownika."; 
 echo "w - wyświetl wszystkie pliki w tym katalogu."; 
-echo "k - zakończ skrypt."; 
 echo "d - wyswietla dziesiejsza date."
+echo "k - zakończ skrypt."; 
 read KONIEC; 
 wybor; 
 done; 
