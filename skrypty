@@ -20,7 +20,7 @@ Multizadaniowy skrypt
 
 
 #!/bin/bash  
-KONIEC='x'; 
+KONIEC="x"; 
 function wybor 
 { 
 case $KONIEC in 
