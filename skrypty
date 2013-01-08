@@ -20,29 +20,32 @@ Multizadaniowy skrypt
 
 
 #!/bin/bash  
-KONIEC="x"; 
+KONIEC='x'; 
 function wybor 
 { 
 case $KONIEC in 
 s) echo "Jesteś w katalogu : $(pwd)" ;; 
 p) echo "teraz wypisze wszystkie twoje procesy"; 
 ps -e ;; 
+d) cal -3;;
 w) echo "Oto lista plików w tym katalogu"; 
 ls ;; 
 esac; 
 } 
-function menu #menu 
+function menu # menu 
 { 
 until [ $KONIEC = k ];do 
 echo "Wciśnij Enter aby kontynuować"; 
 read; 
 clear; # czyść ekran 
+#echo $KONIEC; 
 echo " Proste Menu "; 
 echo; 
 echo "s - wyświetl ścieżkę w której znajduje się skrypt."; 
 echo "p - wyświetl listę procesów użytkownika."; 
 echo "w - wyświetl wszystkie pliki w tym katalogu."; 
 echo "k - zakończ skrypt."; 
+echo "d - wyswietla dziesiejsza date."
 read KONIEC; 
 wybor; 
 done; 
