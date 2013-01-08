@@ -1,0 +1,51 @@
+#Środowisko programisty skrypty
+
+Pierwszy skrypt:
+```sh
+skrypt który kopiuje katalog z zawartością do nowego katalogu, który ma w nazwie dzisiejszą datę.
+
+
+#!/bin/bash 
+# BACKUP
+BACKUP_SOURCE="/home/zapas/" # katalog zrodlowy 
+DESTINATION_DIR=$(date +%F) # nazwa katalogu z dzisiejsza data RRRR-MM-DD
+echo "nastepuje aktywacja skryptu :D"
+mkdir "/home/admin/user_backups/zapas/${DESTINATION_DIR}"
+cp -a "$BACKUP_SOURCE/"* "/home/admin/user_backups/zapas/${DESTINATION_DIR}/"
+```
+
+Drugi skrypt:
+```sh
+Multizadaniowy skrypt
+
+
+#!/bin/bash  
+KONIEC="x"; 
+function wybor 
+{ 
+case $KONIEC in 
+s) echo "Jesteś w katalogu : $(pwd)" ;; 
+p) echo "teraz wypisze wszystkie twoje procesy"; 
+ps -e ;; 
+w) echo "Oto lista plików w tym katalogu"; 
+ls ;; 
+esac; 
+} 
+function menu #menu 
+{ 
+until [ $KONIEC = k ];do 
+echo "Wciśnij Enter aby kontynuować"; 
+read; 
+clear; # czyść ekran 
+echo " Proste Menu "; 
+echo; 
+echo "s - wyświetl ścieżkę w której znajduje się skrypt."; 
+echo "p - wyświetl listę procesów użytkownika."; 
+echo "w - wyświetl wszystkie pliki w tym katalogu."; 
+echo "k - zakończ skrypt."; 
+read KONIEC; 
+wybor; 
+done; 
+} 
+menu; 
+```
