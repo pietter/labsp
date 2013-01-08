@@ -1,7 +1,7 @@
 #Środowisko programisty skrypty
 
 Pierwszy skrypt:
-```sh
+
 skrypt który kopiuje katalog z zawartością do nowego katalogu, który ma w nazwie dzisiejszą datę.
 
 
@@ -12,10 +12,10 @@ DESTINATION_DIR=$(date +%F) # nazwa katalogu z dzisiejsza data RRRR-MM-DD
 echo "nastepuje aktywacja skryptu :D"
 mkdir "/home/admin/user_backups/zapas/${DESTINATION_DIR}"
 cp -a "$BACKUP_SOURCE/"* "/home/admin/user_backups/zapas/${DESTINATION_DIR}/"
-```
+
 
 Drugi skrypt:
-```sh
+
 Multizadaniowy skrypt
 
 
@@ -50,4 +50,4 @@ wybor;
 done; 
 } 
 menu; 
-```
+
