@@ -38,8 +38,7 @@ until [ $KONIEC = k ];do
 echo "Wciśnij Enter aby kontynuować"; 
 read; 
 clear; # czyść ekran 
-#echo $KONIEC; 
-echo " Proste Menu "; 
+echo "Menu "; 
 echo; 
 echo "s - wyświetl ścieżkę w której znajduje się skrypt."; 
 echo "p - wyświetl listę procesów użytkownika."; 
