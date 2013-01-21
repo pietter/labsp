@@ -1,4 +1,31 @@
 #!/bin/bash
+OPTS='ahv'
+LONGOPTS='author,help,version'
+eval set -- $(getopt -o $OPTS --long $LONGOPTS -- $*)
+while true; do
+case $1 in
+-h|--help)
+echo -e "\nUzycie: aby uzyc wybranej funkcji wcisnij odpowiedni klawisz"
+echo -e "\nDostepne opcje:"
+echo -e "\n-a, -author -Wyswietla informacje o autorze"
+echo -e "\n-v, -version - Wyswietla informacje na temat wersji"
+exit
+;;
+-a|--author)
+echo "@2013 Piotrek Krzyżanowski"
+exit
+;;
+-v|--version)
+echo "multimenu v.1.0.2"
+exit
+;;
+*)
+echo "Blad. Wybierz $0 -h aby dowiedziec sie wiecej"
+exit 1
+;;
+esac
+done
+
 KONIEC="x";
 function wybor
 {
