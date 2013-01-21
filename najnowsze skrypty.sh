@@ -96,4 +96,7 @@ kompresja=`zenity --list --title "Wybór bitrate" --text "Wybierz metodę kompre
 	exit 
 	fi
 
-rar a "-v$rozmiar" "-$kompresja" "$wyj.rar" "$wej"
+rar a "-v $rozmiar" "-$kompresja" "$wyj.rar" "$wej"
+
+
+
