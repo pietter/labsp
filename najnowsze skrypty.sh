@@ -1,6 +1,4 @@
-```sh
-test
-```
+#PIERWSZY SKRYPT (multimenu)
 #!/bin/bash
 OPTS='ahv'
 LONGOPTS='author,help,version'
@@ -59,3 +57,43 @@ wybor;
 done;
 }
 menu; 
+
+
+#DRUGI SKRYPT
+#!/bin/bash
+wej=`zenity --file-selection --title="Wybierz plik do podzielenia"`
+
+  if [ "$?" = 1 ] ; then
+		exit 
+	fi
+
+wyj=`zenity --file-selection --save --title="Podaj nazwę oraz wybierz miejsce zapisu spakowanych części."`
+
+	if [ "$?" = 1 ] ; then
+		exit 
+	fi
+
+rozmiar=`zenity --list --text "Wybierz rozmiar podzielonych części:
+	50m - dzielone części będą miały rozmiar 50 Mb
+	100m - dzielone części będą miały rozmiar 100 Mb
+	200m - dzielone części będą miały rozmiar 200 Mb
+" --title "Wybór wielkości podzielonych plików" --radiolist --column "" --column "Dostępne rozmiary" FALSE "50m" FALSE "100m" FALSE "200m"` 
+
+	if [ "$?" = 1 ] ; then
+		exit 
+	fi
+
+kompresja=`zenity --list --title "Wybór bitrate" --text "Wybierz metodę kompresji:
+
+	m0 - kompresja I stopnia (najsłabsza)
+	m1 - kompresja II stopna
+	m2 - kompresja III stopnia
+	m3 - kompresja IV stopnia
+	m4 - kompresja V stopnia
+	m5 - kompresja VI stopnia (najmocniejsza)" --radiolist --column "" --column "Dostępny metody kompresji" FALSE "m0" FALSE "m1" FALSE "m2" FALSE "m3" FALSE "m4" FALSE "m5"`
+
+	if [ "$?" = 1 ] ; then
+	exit 
+	fi
+
+rar a "-v$rozmiar" "-$kompresja" "$wyj.rar" "$wej"
