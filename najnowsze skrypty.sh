@@ -108,7 +108,7 @@ rar a "-v $rozmiar" "-$kompresja" "$wyj.rar" "$wej"
 #echo "Podaj sciezke pliku koncowego "
 #read wyj
 
-if [ "$?"="--help"||"$?"="-h"]
+if [ "$?"="--help" ]||[ "$?"="-h" ]
   then
 echo "Program do dzielenia i pakowania plikow v1.0.2"
 echo "wpisz NAZWAPROGRAMU <sciezkaPlikuDoPodzielenia> <SciezkaKoncowa> aby podzielilo"
