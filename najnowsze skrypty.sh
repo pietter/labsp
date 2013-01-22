@@ -101,13 +101,7 @@ rar a "-v $rozmiar" "-$kompresja" "$wyj.rar" "$wej"
 
 #Drugi skrypt wersja light
 #!/bin/bash
-
-#echo "Podaj sciezke pliku do podzielenia "
-#read wej
-
-#echo "Podaj sciezke pliku koncowego "
-#read wyj
-
+clear
 if [ "$?"="--help" ]||[ "$?"="-h" ]
   then
 echo "Program do dzielenia i pakowania plikow v1.0.2"
