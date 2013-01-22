@@ -99,4 +99,45 @@ kompresja=`zenity --list --title "Wybór bitrate" --text "Wybierz metodę kompre
 rar a "-v $rozmiar" "-$kompresja" "$wyj.rar" "$wej"
 
 
+#Drugi skrypt wersja light
+#!/bin/bash
 
+#echo "Podaj sciezke pliku do podzielenia "
+#read wej
+
+#echo "Podaj sciezke pliku koncowego "
+#read wyj
+
+if [ "$?"="--help"||"$?"="-h"]
+  then
+echo "Program do dzielenia i pakowania plikow v1.0.2"
+echo "wpisz NAZWAPROGRAMU <sciezkaPlikuDoPodzielenia> <SciezkaKoncowa> aby podzielilo"
+echo ""
+echo "--help/-h  wyswietla pomoc"
+exit 
+fi
+
+if [ "$#" -gt 2 ]
+then
+echo "Podales za duzo parametrow (Wpisz --help/-h aby uzyskac pomoc)"
+exit
+else
+echo "Podales za malo parametrow (Wpisz --help/-h aby uzyskac pomoc)"
+exit
+fi
+
+echo "Podaj rozmiar pojedynczego pliku w megabajtach"
+read rozmiar
+
+echo "Podaj moc kompresji (0-5)"
+read kompresja
+
+$m = "m"
+
+rozmiar="$rozmiar""m"
+
+kompresja="m$kompresja"
+
+echo "rar a -v $rozmiar -$kompresja $wyj.rar $wej"
+
+rar a "-v $rozmiar" "-$kompresja" "$0.rar" "$1"
