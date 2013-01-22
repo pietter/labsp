@@ -100,22 +100,23 @@ rar a "-v $rozmiar" "-$kompresja" "$wyj.rar" "$wej"
 
 #Drugi skrypt wersja light
 #!/bin/bash
-clear
-if [ "$?"="--help" ]||[ "$?"="-h" ]
+
+help="--help"
+
+if [ "$1" = "--help" ]||[ "$1" = "-h" ]
   then
-echo "Program do dzielenia i pakowania plikow v1.0.2"
-echo "wpisz NAZWAPROGRAMU <sciezkaPlikuDoPodzielenia> <SciezkaKoncowa> aby podzielilo"
 echo ""
-echo "--help/-h  wyswietla pomoc"
+echo "Program do dzielenia i pakowania plikow"
+echo "wpisz NAZWAPROGRAMU <sciezkaPlikuDoPodzielenia> <SciezkaKoncowa> aby podzielilo"
+echo "\n--help/-h  wyswietla ten komunikat"
 exit 
+  else
+  echo ""
 fi
 
-if [ "$#" -gt 2 ]
-then
-echo "Podales za duzo parametrow (Wpisz --help/-h aby uzyskac pomoc)"
-exit
-else
-echo "Podales za malo parametrow (Wpisz --help/-h aby uzyskac pomoc)"
+if [ "$#" -ne 2 ]
+  then
+echo "\nPodales zla ilosc parametrow (Wpisz --help/-h aby uzyskac pomoc)"
 exit
 fi
 
@@ -125,12 +126,10 @@ read rozmiar
 echo "Podaj moc kompresji (0-5)"
 read kompresja
 
-$m = "m"
-
 rozmiar="$rozmiar""m"
 
 kompresja="m$kompresja"
 
-echo "rar a -v $rozmiar -$kompresja $wyj.rar $wej"
+#echo "rar a -v $rozmiar -$kompresja $wyj.rar $wej"
 
-rar a "-v $rozmiar" "-$kompresja" "$0.rar" "$1"
+rar a "-v $rozmiar" "-$kompresja" "$2.rar" "$1"
